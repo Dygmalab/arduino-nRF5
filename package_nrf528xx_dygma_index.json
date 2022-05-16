@@ -19,8 +19,8 @@
           },
           "url": "https://github.com/Dygmalab/arduino-nRF5/archive/refs/tags/0.8.0.zip",
           "archiveFileName": "arduino-nRF52-0.8.0.tar.gz",
-          "checksum": "MD5:7316605161783e2b944e08fc44c7b6f8",
-          "size": "1487463",
+          "checksum": "SHA-256:e66866e18e4e5e89eed5f2cd5147a7201cedd5ef3f763fa90ff15d730b89d627",
+          "size": "12464974",
           "boards": [
             {"name": "BBC micro:bit"},
             {"name": "BBC micro:bit v2"},
