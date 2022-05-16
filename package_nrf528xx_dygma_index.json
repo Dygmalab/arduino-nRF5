@@ -17,7 +17,7 @@
           "help": {
             "online": "https://github.com/Dygmalab/arduino-nRF5/issues"
           },
-          "url": "https://github.com/Dygmalab/arduino-nRF5/archive/0.8.0.tar.gz",
+          "url": "https://github.com/Dygmalab/arduino-nRF5/archive/refs/tags/0.8.0.zip",
           "archiveFileName": "arduino-nRF52-0.8.0.tar.gz",
           "checksum": "MD5:7316605161783e2b944e08fc44c7b6f8",
           "size": "1487463",
