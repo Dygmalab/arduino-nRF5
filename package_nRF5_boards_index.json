@@ -1,12 +1,12 @@
 {
   "packages": [
     {
-      "name": "sandeepmistry",
-      "maintainer": "Sandeep Mistry",
-      "websiteURL": "https://github.com/sandeepmistry/arduino-nRF5",
-      "email": "sandeep.mistry@gmail.com",
+      "name": "Dygma ",
+      "maintainer": "Dygma Firmware department",
+      "websiteURL": "https://github.com/Dygmalab/arduino-nRF5",
+      "email": "juan@dygma.com",
       "help": {
-        "online": "https://github.com/sandeepmistry/arduino-nRF5/issues"
+        "online": "https://github.com/Dygmalab/arduino-nRF5/issues"
       },
       "platforms": [
         {
