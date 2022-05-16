@@ -10,7 +10,7 @@
       },
       "platforms": [
         {
-          "name": "Nordic Semiconductor nRF528xx",
+          "name": "Dygma Defy",
           "architecture": "nRF52",
           "version": "0.1.0",
           "category": "Contributed",
