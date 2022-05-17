@@ -41,7 +41,7 @@ Uart::Uart(NRF_UART_Type *_nrfUart, IRQn_Type _IRQn, uint8_t _pinRX, uint8_t _pi
   uc_hwFlow = 1;
 }
 
-#ifdef ARDUINO_GENERIC
+#ifdef ARDUINO_NRF5_DEFY
 void Uart::setPins(uint8_t _pinRX, uint8_t _pinTX)
 {
   uc_pinRX = g_ADigitalPinMap[_pinRX];
@@ -55,7 +55,7 @@ void Uart::setPins(uint8_t _pinRX, uint8_t _pinTX, uint8_t _pinCTS, uint8_t _pin
   uc_pinCTS = g_ADigitalPinMap[_pinCTS];
   uc_pinRTS = g_ADigitalPinMap[_pinRTS];
 }
-#endif // ARDUINO_GENERIC
+#endif // ARDUINO_NRF5_DEFY
 
 void Uart::begin(unsigned long baudrate)
 {
