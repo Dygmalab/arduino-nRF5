@@ -104,9 +104,9 @@ void USB_PackMessages(bool pack);
 #define USB_Send                    USBD_Send
 #define USB_Flush                   USBD_Flush
 
-#elif defined(ARDUINO_ARCH_SAMD)
+#elif defined(ARDUINO_ARCH_NRF52)
 
-#include "USB/PluggableUSB.h"
+#include "api/PluggableUSB.h"
 
 #define EPTYPE_DESCRIPTOR_SIZE      uint32_t
 #define EP_TYPE_INTERRUPT_IN        USB_ENDPOINT_TYPE_INTERRUPT | USB_ENDPOINT_IN(0);

@@ -18,25 +18,36 @@
 
 #pragma once
 
-#ifdef ARDUINO_SAMD_RAISE
+#ifdef ARDUINO_NRF5_DEFY
 
-#include "kaleidoscope/plugin.h"
+#include <Arduino.h>
 
 namespace kaleidoscope {
 namespace device {
 namespace dygma {
 namespace raise {
 
-class Focus : public kaleidoscope::Plugin {
+class TWI {
  public:
-  EventHandlerResult onFocusEvent(const char *command);
+  explicit TWI(int addr) : addr_(addr), crc_errors_(0) {}
+
+  uint8_t writeTo(uint8_t *data, size_t length);
+  uint8_t readFrom(uint8_t* data, size_t length);
+  void recovery();
+  void disable();
+  void init(uint16_t clock_khz);
+  uint8_t crc_errors() {
+    return crc_errors_;
+  }
+
+ private:
+  int addr_;
+  uint8_t crc_errors_;
+  uint16_t clock_khz_;
 };
 
 }
 }
 }
 }
-
-extern kaleidoscope::device::dygma::raise::Focus RaiseFocus;
-
 #endif

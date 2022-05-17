@@ -18,7 +18,7 @@
 
 #pragma once
 
-#ifdef ARDUINO_SAMD_RAISE
+#ifdef ARDUINO_NRF5_DEFY
 
 #include "kaleidoscope/Runtime.h"
 #include "kaleidoscope/plugin.h"

@@ -18,7 +18,7 @@
 
 #pragma once
 
-#ifdef NRF52833_XXAA
+#ifdef ARDUINO_SAMD_RAISE
 
 #include <Arduino.h>
 

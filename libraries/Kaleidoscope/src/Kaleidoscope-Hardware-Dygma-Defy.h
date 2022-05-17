@@ -18,25 +18,4 @@
 
 #pragma once
 
-#ifdef ARDUINO_SAMD_RAISE
-
-#include "kaleidoscope/plugin.h"
-
-namespace kaleidoscope {
-namespace device {
-namespace dygma {
-namespace raise {
-
-class Focus : public kaleidoscope::Plugin {
- public:
-  EventHandlerResult onFocusEvent(const char *command);
-};
-
-}
-}
-}
-}
-
-extern kaleidoscope::device::dygma::raise::Focus RaiseFocus;
-
-#endif
+#include "kaleidoscope/device/dygma/Defy.h"

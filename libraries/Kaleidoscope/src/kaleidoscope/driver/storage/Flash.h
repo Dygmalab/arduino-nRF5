@@ -25,7 +25,7 @@
 
 #pragma once
 
-#ifdef NRF52833_XXAA
+#ifdef ARDUINO_SAMD_RAISE
 
 #include "kaleidoscope/driver/storage/Base.h"
 #include <FlashStorage.h>

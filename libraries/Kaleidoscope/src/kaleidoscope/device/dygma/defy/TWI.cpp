@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifdef ARDUINO_SAMD_RAISE
+#ifdef ARDUINO_NRF5_DEFY
 
 #include <Wire.h>
 
