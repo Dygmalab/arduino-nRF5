@@ -1,5 +1,5 @@
 /* -*- mode: c++ -*-
- * kaleidoscope::device::dygma::Raise -- Kaleidoscope device plugin for Dygma Raise
+ * kaleidoscope::device::dygma::Defy -- Kaleidoscope device plugin for Dygma Defy
  * Copyright (C) 2017-2019  Keyboard.io, Inc
  * Copyright (C) 2017-2019  Dygma Lab S.L.
  *
@@ -25,7 +25,7 @@
 namespace kaleidoscope {
 namespace device {
 namespace dygma {
-namespace raise {
+namespace Defy {
 
 class Focus : public kaleidoscope::Plugin {
  public:
@@ -37,6 +37,6 @@ class Focus : public kaleidoscope::Plugin {
 }
 }
 
-extern kaleidoscope::device::dygma::raise::Focus RaiseFocus;
+extern kaleidoscope::device::dygma::Defy::Focus DefyFocus;
 
 #endif

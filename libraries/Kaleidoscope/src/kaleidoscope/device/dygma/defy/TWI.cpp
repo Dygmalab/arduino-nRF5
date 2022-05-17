@@ -1,5 +1,5 @@
 /* -*- mode: c++ -*-
- * kaleidoscope::device::dygma::Raise -- Kaleidoscope device plugin for Dygma Raise
+ * kaleidoscope::device::dygma::Defy -- Kaleidoscope device plugin for Dygma Defy
  * Copyright (C) 2017-2019  Keyboard.io, Inc
  * Copyright (C) 2017-2019  Dygma Lab S.L.
  *
@@ -26,7 +26,7 @@
 namespace kaleidoscope {
 namespace device {
 namespace dygma {
-namespace raise {
+namespace Defy {
 
 uint8_t TWI::writeTo(uint8_t *data, size_t length) {
   Wire.beginTransmission(addr_);

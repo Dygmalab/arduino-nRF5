@@ -1,5 +1,5 @@
 /* -*- mode: c++ -*-
- * kaleidoscope::device::dygma::Raise -- Kaleidoscope device plugin for Dygma Raise
+ * kaleidoscope::device::dygma::Defy -- Kaleidoscope device plugin for Dygma Defy
  * Copyright (C) 2017-2019  Keyboard.io, Inc
  * Copyright (C) 2017-2019  Dygma Lab S.L.
  *
@@ -20,15 +20,15 @@
 
 #include "kaleidoscope/Runtime.h"
 #include <Kaleidoscope-FocusSerial.h>
-#include "kaleidoscope/device/dygma/raise/Focus.h"
+#include "kaleidoscope/device/dygma/Defy/Focus.h"
 
 namespace kaleidoscope {
 namespace device {
 namespace dygma {
-namespace raise {
+namespace Defy {
 
-#ifndef RAISE_FIRMWARE_VERSION
-#define RAISE_FIRMWARE_VERSION "<unknown>"
+#ifndef Defy_FIRMWARE_VERSION
+#define Defy_FIRMWARE_VERSION "<unknown>"
 #endif
 
 EventHandlerResult Focus::onFocusEvent(const char *command) {
@@ -39,12 +39,12 @@ EventHandlerResult Focus::onFocusEvent(const char *command) {
     return EventHandlerResult::OK;
 
   if (strcmp_P(command + 9, PSTR("version")) == 0) {
-    ::Focus.send("Dygma Raise");
+    ::Focus.send("Dygma Defy");
     return EventHandlerResult::EVENT_CONSUMED;
   }
 
   if (strcmp_P(command + 9, PSTR("firmware")) == 0) {
-    ::Focus.send(RAISE_FIRMWARE_VERSION);
+    ::Focus.send(Defy_FIRMWARE_VERSION);
     return EventHandlerResult::EVENT_CONSUMED;
   }
 
@@ -135,6 +135,6 @@ EventHandlerResult Focus::onFocusEvent(const char *command) {
 }
 }
 
-kaleidoscope::device::dygma::raise::Focus RaiseFocus;
+kaleidoscope::device::dygma::Defy::Focus DefyFocus;
 
 #endif

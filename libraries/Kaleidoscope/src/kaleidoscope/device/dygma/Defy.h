@@ -1,5 +1,5 @@
 /* -*- mode: c++ -*-
- * kaleidoscope::device::dygma::Raise -- Kaleidoscope device plugin for Dygma Raise
+ * kaleidoscope::device::dygma::Defy -- Kaleidoscope device plugin for Dygma Defy
  * Copyright (C) 2017-2020  Keyboard.io, Inc
  * Copyright (C) 2017-2020  Dygma Lab S.L.
  *
@@ -21,7 +21,7 @@
 #ifdef ARDUINO_NRF5_DEFY
 #include <Arduino.h>
 
-#include "kaleidoscope/device/dygma/raise/Hand.h"
+#include "kaleidoscope/device/dygma/Defy/Hand.h"
 
 #define CRGB(r,g,b) (cRGB){b, g, r}
 
@@ -41,7 +41,7 @@ namespace dygma {
 
 using kaleidoscope::driver::led::no_led;
 
-struct RaiseLEDDriverProps : public kaleidoscope::driver::led::BaseProps {
+struct DefyLEDDriverProps : public kaleidoscope::driver::led::BaseProps {
   static constexpr uint8_t led_count = 132;
   static constexpr uint8_t key_led_map[] = {
     // ISO & ANSI (ANSI has no LED at 20, but this key can never be pressed so we can have just one map).
@@ -54,7 +54,7 @@ struct RaiseLEDDriverProps : public kaleidoscope::driver::led::BaseProps {
 };
 #undef LHK
 
-class RaiseLEDDriver : public kaleidoscope::driver::led::Base<RaiseLEDDriverProps> {
+class DefyLEDDriver : public kaleidoscope::driver::led::Base<DefyLEDDriverProps> {
  public:
   static void setup();
 
@@ -74,7 +74,7 @@ class RaiseLEDDriver : public kaleidoscope::driver::led::Base<RaiseLEDDriverProp
   static constexpr uint8_t lph = LEDS_PER_HAND;
   // led_count + 1, to account for the Neuron's LED. The last one is the
   // Neuron's LED, never send that to SLED.
-  static constexpr uint8_t led_map[][RaiseLEDDriverProps::led_count + 1] = {
+  static constexpr uint8_t led_map[][DefyLEDDriverProps::led_count + 1] = {
     // ISO
     {
       // left side - 33 keys includes LP
@@ -110,7 +110,7 @@ class RaiseLEDDriver : public kaleidoscope::driver::led::Base<RaiseLEDDriverProp
   };
 };
 
-struct RaiseKeyScannerProps : public kaleidoscope::driver::keyscanner::BaseProps {
+struct DefyKeyScannerProps : public kaleidoscope::driver::keyscanner::BaseProps {
   static constexpr uint8_t matrix_rows = 5;
   static constexpr uint8_t matrix_columns = 16;
   typedef MatrixAddr<matrix_rows, matrix_columns> KeyAddr;
@@ -119,10 +119,10 @@ struct RaiseKeyScannerProps : public kaleidoscope::driver::keyscanner::BaseProps
   static constexpr uint8_t right_columns = matrix_columns - left_columns;
 };
 
-class RaiseKeyScanner : public kaleidoscope::driver::keyscanner::Base<RaiseKeyScannerProps> {
+class DefyKeyScanner : public kaleidoscope::driver::keyscanner::Base<DefyKeyScannerProps> {
  private:
-  typedef RaiseKeyScanner ThisType;
-  typedef RaiseKeyScannerProps Props_;
+  typedef DefyKeyScanner ThisType;
+  typedef DefyKeyScannerProps Props_;
  public:
   static void setup();
   static void scanMatrix();
@@ -145,41 +145,41 @@ class RaiseKeyScanner : public kaleidoscope::driver::keyscanner::Base<RaiseKeySc
   static void reset();
 
  protected:
-  static raise::keydata_t leftHandState;
-  static raise::keydata_t rightHandState;
-  static raise::keydata_t previousLeftHandState;
-  static raise::keydata_t previousRightHandState;
+  static Defy::keydata_t leftHandState;
+  static Defy::keydata_t rightHandState;
+  static Defy::keydata_t previousLeftHandState;
+  static Defy::keydata_t previousRightHandState;
 
-  static raise::keydata_t leftHandMask;
-  static raise::keydata_t rightHandMask;
+  static Defy::keydata_t leftHandMask;
+  static Defy::keydata_t rightHandMask;
 
   static bool lastLeftOnline;
   static bool lastRightOnline;
 };
 
-struct RaiseStorageProps : public kaleidoscope::driver::storage::FlashProps {
+struct DefyStorageProps : public kaleidoscope::driver::storage::FlashProps {
   static constexpr uint16_t length = EEPROM_EMULATION_SIZE;
 };
 
-struct RaiseSideFlasherProps : public kaleidoscope::util::flasher::BaseProps {};
+struct DefySideFlasherProps : public kaleidoscope::util::flasher::BaseProps {};
 
-struct RaiseProps : kaleidoscope::device::BaseProps {
-  typedef RaiseLEDDriverProps  LEDDriverProps;
-  typedef RaiseLEDDriver LEDDriver;
-  typedef RaiseKeyScannerProps KeyScannerProps;
-  typedef RaiseKeyScanner KeyScanner;
-  typedef RaiseStorageProps StorageProps;
+struct DefyProps : kaleidoscope::device::BaseProps {
+  typedef DefyLEDDriverProps  LEDDriverProps;
+  typedef DefyLEDDriver LEDDriver;
+  typedef DefyKeyScannerProps KeyScannerProps;
+  typedef DefyKeyScanner KeyScanner;
+  typedef DefyStorageProps StorageProps;
   typedef kaleidoscope::driver::storage::Flash<StorageProps> Storage;
   typedef kaleidoscope::driver::bootloader::samd::Bossac BootLoader;
 
-  typedef RaiseSideFlasherProps SideFlasherProps;
+  typedef DefySideFlasherProps SideFlasherProps;
   typedef kaleidoscope::util::flasher::KeyboardioI2CBootloader<SideFlasherProps> SideFlasher;
-  static constexpr const char *short_name = "raise";
+  static constexpr const char *short_name = "Defy";
 };
 
-class Raise: public kaleidoscope::device::Base<RaiseProps> {
+class Defy: public kaleidoscope::device::Base<DefyProps> {
  private:
-  static RaiseProps::SideFlasher SideFlasher;
+  static DefyProps::SideFlasher SideFlasher;
  public:
   static void setup();
 
@@ -233,7 +233,7 @@ class Raise: public kaleidoscope::device::Base<RaiseProps> {
 }
 }
 
-typedef kaleidoscope::device::dygma::Raise Device;
+typedef kaleidoscope::device::dygma::Defy Device;
 
 }
 

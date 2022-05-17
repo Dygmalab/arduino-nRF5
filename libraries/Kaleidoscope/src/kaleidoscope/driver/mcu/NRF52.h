@@ -1,7 +1,7 @@
 /* -*- mode: c++ -*-
- * kaleidoscope::device::dygma::Defy -- Kaleidoscope device plugin for Dygma Defy
- * Copyright (C) 2017-2019  Keyboard.io, Inc
- * Copyright (C) 2017-2019  Dygma Lab S.L.
+ * driver::mcu::SAMD -- SAMD MCU driver class for Kaleidoscope
+ * Copyright (C) 2019, 2020  Keyboard.io, Inc
+ * Copyright (C) 2019  Dygma, Inc
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -18,36 +18,26 @@
 
 #pragma once
 
-#ifdef ARDUINO_NRF5_DEFY
+#ifdef ARDUINO_ARCH_NRF52
 
-#include <Arduino.h>
+#include "kaleidoscope/driver/mcu/Base.h"
 
 namespace kaleidoscope {
-namespace device {
-namespace dygma {
-namespace Defy {
+namespace driver {
+namespace mcu {
 
-class TWI {
+class SAMD : public kaleidoscope::driver::mcu::Base<BaseProps> {
  public:
-  explicit TWI(int addr) : addr_(addr), crc_errors_(0) {}
-
-  uint8_t writeTo(uint8_t *data, size_t length);
-  uint8_t readFrom(uint8_t* data, size_t length);
-  void recovery();
-  void disable();
-  void init(uint16_t clock_khz);
-  uint8_t crc_errors() {
-    return crc_errors_;
+  void detachFromHost() {
+    USBDevice.detach();
   }
-
- private:
-  int addr_;
-  uint8_t crc_errors_;
-  uint16_t clock_khz_;
+  void attachToHost() {
+    USBDevice.attach();
+  }
 };
 
 }
 }
 }
-}
+
 #endif
