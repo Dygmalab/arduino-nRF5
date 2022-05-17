@@ -131,7 +131,7 @@ int USB_SendControl(uint8_t x, const void* y, uint8_t z);
 
 #elif defined(ARDUINO_ARCH_NRF52)
 
-#include "Usb.h"
+#include "api/USBAPI.h"
 
 #define EPTYPE_DESCRIPTOR_SIZE      uint32_t
 
