@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifdef ARDUINO_SAMD_RAISE
+#ifdef DNRF52833_XXAA
 
 #include "kaleidoscope/Runtime.h"
 #include <Kaleidoscope-FocusSerial.h>

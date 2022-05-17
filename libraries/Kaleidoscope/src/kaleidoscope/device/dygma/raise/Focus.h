@@ -18,7 +18,7 @@
 
 #pragma once
 
-#ifdef ARDUINO_SAMD_RAISE
+#ifdef DNRF52833_XXAA
 
 #include "kaleidoscope/plugin.h"
 

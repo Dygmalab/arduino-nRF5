@@ -19,7 +19,7 @@
 #pragma once
 
 // TODO(@algernon): We should support AVR here, too.
-#ifdef __SAMD21G18A__
+#ifdef DNRF52833_XXAA
 
 #include <Wire.h>
 

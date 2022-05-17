@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifdef ARDUINO_SAMD_RAISE
+#ifdef DNRF52833_XXAA
 
 #include <Arduino.h>
 #include "Hand.h"

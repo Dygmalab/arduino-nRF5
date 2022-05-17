@@ -38,7 +38,7 @@ Generic_nRF52833.build.board=GENERIC
 Generic_nRF52833.build.core=nRF5
 Generic_nRF52833.build.variant=Generic
 Generic_nRF52833.build.variant_system_lib=
-Generic_nRF52833.build.extra_flags=-DNRF52833_XXAA
+Generic_nRF52833.build.extra_flags=-DNRF52833_XXAA -DKALEIDOSCOPE_HARDWARE_H="Kaleidoscope-Hardware-Dygma-Raise.h"
 Generic_nRF52833.build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16
 Generic_nRF52833.build.ldscript=nrf52833_xxaa.ld
 

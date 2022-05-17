@@ -25,7 +25,7 @@
 
 #pragma once
 
-#ifdef __SAMD21G18A__
+#ifdef DNRF52833_XXAA
 
 #include "kaleidoscope/driver/storage/Base.h"
 #include <FlashStorage.h>
