@@ -18,7 +18,7 @@
 
 #pragma once
 
-#ifdef DNRF52833_XXAA
+#ifdef NRF52833_XXAA
 
 #include "kaleidoscope/plugin.h"
 

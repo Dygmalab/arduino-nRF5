@@ -461,7 +461,7 @@
 #include "pinmux.h"
 
 // fix for Arduino zero
-#if defined(DNRF52833_XXAA)
+#if defined(NRF52833_XXAA)
  #define SAMD21     1
  #define SAMD21G    1
  #define TC_ASYNC   1

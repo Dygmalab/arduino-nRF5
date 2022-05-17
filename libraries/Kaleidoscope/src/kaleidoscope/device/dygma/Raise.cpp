@@ -16,7 +16,7 @@
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifdef DNRF52833_XXAA
+#ifdef NRF52833_XXAA
 
 #include "kaleidoscope/Runtime.h"
 #include <Kaleidoscope-EEPROM-Settings.h>
