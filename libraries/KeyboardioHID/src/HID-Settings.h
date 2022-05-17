@@ -104,9 +104,9 @@ void USB_PackMessages(bool pack);
 #define USB_Send                    USBD_Send
 #define USB_Flush                   USBD_Flush
 
-#elif defined(ARDUINO_ARCH_NRF52)
+#elif defined(ARDUINO_ARCH_SAMD)
 
-#include "api/PluggableUSB.h"
+#include "USB/PluggableUSB.h"
 
 #define EPTYPE_DESCRIPTOR_SIZE      uint32_t
 #define EP_TYPE_INTERRUPT_IN        USB_ENDPOINT_TYPE_INTERRUPT | USB_ENDPOINT_IN(0);
@@ -128,6 +128,13 @@ int USB_SendControl(uint8_t x, const void* y, uint8_t z);
 #define HID_REPORT_TYPE_INPUT       1
 #define HID_REPORT_TYPE_OUTPUT      2
 #define HID_REPORT_TYPE_FEATURE     3
+
+#elif defined(ARDUINO_ARCH_NRF52)
+
+#include "Usb.h"
+
+#define EPTYPE_DESCRIPTOR_SIZE      uint32_t
+
 
 #else
 
