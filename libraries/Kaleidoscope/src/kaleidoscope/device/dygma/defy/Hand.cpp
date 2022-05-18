@@ -1,5 +1,5 @@
 /* -*- mode: c++ -*-
- * kaleidoscope::device::dygma::Raise -- Kaleidoscope device plugin for Dygma Raise
+ * kaleidoscope::device::dygma::Defy -- Kaleidoscope device plugin for Dygma Defy
  * Copyright (C) 2017-2019  Keyboard.io, Inc
  * Copyright (C) 2017-2020  Dygma Lab S.L.
  *
@@ -26,7 +26,7 @@
 namespace kaleidoscope {
 namespace device {
 namespace dygma {
-namespace raise {
+namespace Defy {
 
 #define TWI_CMD_NONE 0x00
 #define TWI_CMD_VERSION 0x01
@@ -231,7 +231,7 @@ void Hand::sendLEDBank(uint8_t bank) {
 
     data[i + 1] = pgm_read_byte(&gamma8[c]);
 
-    // The Red component on the Raise hardware appears to get more voltage than
+    // The Red component on the Defy hardware appears to get more voltage than
     // the others, resulting in colors slightly off. Adjust for that here by
     // reducing the red component a little.
     //
