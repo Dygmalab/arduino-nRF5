@@ -131,6 +131,6 @@ int USB_SendControl(uint8_t x, const void* y, uint8_t z);
 
 #else
 
-#error "Unsupported architecture"
+#error "ERROR in HID-Settings.h -> Unsupported architecture"
 
 #endif
