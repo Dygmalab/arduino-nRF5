@@ -20,7 +20,7 @@
 #ifndef PUSB_h
 #define PUSB_h
 
-#include "USBAPI.h"
+#include "api/USBAPI.h"
 #include <stdint.h>
 #include <stddef.h>
 
@@ -65,6 +65,7 @@ private:
   PluggableUSBModule* rootNode;
   uint8_t totalEP;
 };
+
 }
 
 // core need to define
