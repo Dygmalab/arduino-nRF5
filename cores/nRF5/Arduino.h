@@ -59,6 +59,8 @@ void loop( void ) ;
   #include "Uart.h"
 #endif
 
+#include "api/ArduinoAPI.h"
+
 // Include board variant
 #include "variant.h"
 
