@@ -57,9 +57,9 @@ void loop( void ) ;
 #include "binary.h"
 #ifdef __cplusplus
   #include "Uart.h"
+  #include "api/PluggableUSB.h"
+  #include "api/USBAPI.h"
 #endif
-
-#include "api/ArduinoAPI.h"
 
 // Include board variant
 #include "variant.h"

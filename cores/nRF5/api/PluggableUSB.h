@@ -20,7 +20,7 @@
 #ifndef PUSB_h
 #define PUSB_h
 
-#include "api/USBAPI.h"
+#include "USBAPI.h"
 #include <stdint.h>
 #include <stddef.h>
 

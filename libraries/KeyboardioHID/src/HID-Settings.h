@@ -131,10 +131,6 @@ int USB_SendControl(uint8_t x, const void* y, uint8_t z);
 
 #elif defined(ARDUINO_ARCH_NRF52)
 
-<<<<<<< HEAD
-=======
-//#include "api/USBAPI.h"
->>>>>>> 077f529de9130a42e8828488c18317fcf6c1d0c4
 #include "api/PluggableUSB.h"
 
 #define EPTYPE_DESCRIPTOR_SIZE      uint32_t
@@ -161,6 +157,6 @@ int USB_SendControl(uint8_t x, const void* y, uint8_t z);
 
 #else
 
-#error "ERROR in HID-Settings.h -> Unsupported architecture"
+#error "ERROR in HID-Settings.h unsupported architecture"
 
 #endif
