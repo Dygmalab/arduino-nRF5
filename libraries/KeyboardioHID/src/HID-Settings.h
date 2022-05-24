@@ -131,7 +131,7 @@ int USB_SendControl(uint8_t x, const void* y, uint8_t z);
 
 #elif defined(ARDUINO_ARCH_NRF52)
 
-#include "api/PluggableUSB.h"
+#include "USB/PluggableUSB.h"
 
 #define EPTYPE_DESCRIPTOR_SIZE      uint32_t
 #define EP_TYPE_INTERRUPT_IN        USB_ENDPOINT_TYPE_INTERRUPT | USB_ENDPOINT_IN(0);
