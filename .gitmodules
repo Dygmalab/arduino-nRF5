@@ -1,3 +1,6 @@
 [submodule "libraries/nrfx"]
 	path = libraries/nrfx
 	url = https://github.com/JuanHauara/nrfx.git
+[submodule "cores/nRF5/SDK/components/drivers_nrf/nrfx"]
+	path = cores/nRF5/SDK/components/drivers_nrf/nrfx
+	url = https://github.com/JuanHauara/nrfx.git
