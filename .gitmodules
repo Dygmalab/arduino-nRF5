@@ -1,0 +1,3 @@
+[submodule "libraries/nrfx"]
+	path = libraries/nrfx
+	url = https://github.com/JuanHauara/nrfx.git
