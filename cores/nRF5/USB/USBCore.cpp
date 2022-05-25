@@ -21,6 +21,7 @@
 #include <Arduino.h>
 
 //#include "SAMD21_USBDevice.h"
+#include "USBDevice_nRF52833.h"
 #include "PluggableUSB.h"
 
 #include <stdlib.h>
@@ -29,6 +30,7 @@
 #include <limits.h>
 
 //USBDevice_SAMD21G18x usbd;
+USBDevice_nRF52833 usbd;
 
 /** Pulse generation counters to keep track of the number of milliseconds remaining for each pulse type */
 #define TX_RX_LED_PULSE_MS 100
