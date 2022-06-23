@@ -57,8 +57,6 @@ void loop( void ) ;
 #include "binary.h"
 #ifdef __cplusplus
   #include "Uart.h"
-  //#include "api/PluggableUSB.h"
-  //#include "api/USBAPI.h"
 #endif
 
 // Include board variant
@@ -127,12 +125,6 @@ void loop( void ) ;
 
 // Interrupts
 #define digitalPinToInterrupt(P)   ( P )
-
-// USB Device
-#include "USB/USBDesc.h"
-#include "USB/USBCore.h"
-#include "USB/USBAPI.h"
-//#include "USB/USB_host.h"
 
 #ifdef __cplusplus
 #include "Uart.h"
