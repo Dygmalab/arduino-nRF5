@@ -24,6 +24,10 @@ extern "C" {
 
 extern void init(void);
 
+void enterSerialDfu(void);
+void enterOTADfu(void);
+void enterUf2Dfu(void);
+
 #ifdef __cplusplus
 }
 #endif

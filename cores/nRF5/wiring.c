@@ -21,6 +21,10 @@
 
 #include "Arduino.h"
 
+#define DFU_MAGIC_SERIAL_ONLY_RESET   0x4e
+#define DFU_MAGIC_UF2_RESET           0x57
+#define DFU_MAGIC_OTA_RESET           0xA8
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -59,6 +63,24 @@ void init( void )
       NVIC_SystemReset();
   }
   #endif
+}
+
+void enterUf2Dfu(void)
+{
+  NRF_POWER->GPREGRET = DFU_MAGIC_UF2_RESET;
+  NVIC_SystemReset();
+}
+
+void enterSerialDfu(void)
+{
+  NRF_POWER->GPREGRET = DFU_MAGIC_SERIAL_ONLY_RESET;
+  NVIC_SystemReset();
+}
+
+void enterOTADfu(void)
+{
+  NRF_POWER->GPREGRET = DFU_MAGIC_OTA_RESET;
+  NVIC_SystemReset();
 }
 
 #ifdef __cplusplus
