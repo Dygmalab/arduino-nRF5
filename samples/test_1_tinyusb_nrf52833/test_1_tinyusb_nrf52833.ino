@@ -2,8 +2,8 @@
 
 //#include "hw/bsp/board_mcu.h"
 #include "tusb.h"
-//#include "usb_descriptors.h"
-//#include "class/hid/hid_device.h"
+#include "usb_descriptors.h"
+#include "class/hid/hid_device.h"
 
 //#include "nrfx_usbd.h"
 
@@ -48,12 +48,12 @@ void setup()
 	}
 
 	//board_init();
-	tusb_init(); // initialize tinyusb stack
+	//tusb_init(); // initialize tinyusb stack
 	digitalWrite(LED1, LOW);
 }
 
 void loop() 
 {
-	tud_task(); // device task
+	//tud_task(); // device task
 	digitalWrite(LED2, LOW);
 }
