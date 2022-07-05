@@ -48,7 +48,7 @@ void setup()
 	}
 
 	//board_init();
-	//tusb_init(); // initialize tinyusb stack
+	tusb_init(); // initialize tinyusb stack
 	digitalWrite(LED1, LOW);
 }
 
